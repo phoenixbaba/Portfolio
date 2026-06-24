@@ -657,56 +657,6 @@
   }
   .tool-label { color: var(--muted); font-size: 0.65rem; margin-left: auto; letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* PIPELINE */
-  #pipeline { background: var(--bg); }
-  .pipeline-steps {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2px;
-    margin-top: 60px;
-  }
-  .pipeline-step {
-    background: var(--surface);
-    padding: 36px 28px;
-    border-top: 2px solid var(--border);
-    transition: border-color .3s, background .3s;
-    position: relative;
-    overflow: hidden;
-  }
-  .pipeline-step::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .pipeline-step:hover::before { transform: scaleX(1); }
-  .pipeline-step:hover { background: #121212; }
-
-  .step-num {
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.15em;
-    margin-bottom: 24px;
-  }
-  .step-icon {
-    font-size: 1.6rem;
-    margin-bottom: 16px;
-  }
-  .step-title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-  .step-desc {
-    font-size: 0.75rem;
-    line-height: 1.7;
-    color: var(--muted);
-  }
-
   /* CTA */
   #contact {
     background: var(--accent);
@@ -975,10 +925,7 @@
     .projects-grid { gap: 2px; }
     .project-card:nth-child(n) { grid-column: span 12; aspect-ratio: 4/3; }
 
-    .pipeline-steps { grid-template-columns: 1fr 1fr; margin-top: 40px; }
-    .pipeline-step:last-child { grid-column: span 2; }
-    .pipeline-step { padding: 24px 20px; }
-
+    
     .about-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 40px; }
     .tools-list { grid-template-columns: 1fr; }
 
@@ -998,9 +945,7 @@
   }
 
   @media (max-width: 420px) {
-    .pipeline-steps { grid-template-columns: 1fr; }
-    .pipeline-step:last-child { grid-column: span 1; }
-  }
+      }
 </style>
 </head>
 <body>
@@ -1015,8 +960,7 @@
     <ul class="nav-links">
       <li><a href="#reel">Reel</a></li>
       <li><a href="#work">Work</a></li>
-      <li><a href="#pipeline">Pipeline</a></li>
-      <li><a href="#about">About</a></li>
+            <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -1188,46 +1132,6 @@
         </div>
         <div class="card-number">05</div>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- PIPELINE -->
-<section id="pipeline">
-  <div class="container">
-    <div class="section-label reveal">How I Work</div>
-    <h2 class="reveal">From blockout<br>to final frame.</h2>
-    <div class="pipeline-steps">
-      <div class="pipeline-step reveal">
-        <div class="step-num">01</div>
-        <div class="step-icon">⬡</div>
-        <div class="step-title">Environment Blockout</div>
-        <div class="step-desc">Layout, scale, and composition built first in Maya/Unreal — the world before the detail.</div>
-      </div>
-      <div class="pipeline-step reveal reveal-delay-1">
-        <div class="step-num">02</div>
-        <div class="step-icon">◈</div>
-        <div class="step-title">Texturing & Lighting</div>
-        <div class="step-desc">Substance for materials, Unreal for lighting — mood is crafted, not accidental.</div>
-      </div>
-      <div class="pipeline-step reveal reveal-delay-2">
-        <div class="step-num">03</div>
-        <div class="step-icon">✦</div>
-        <div class="step-title">FX Simulation</div>
-        <div class="step-desc">Fire, smoke, fluid, and destruction built in Houdini — physics that reads as real.</div>
-      </div>
-      <div class="pipeline-step reveal reveal-delay-3">
-        <div class="step-num">04</div>
-        <div class="step-icon">◎</div>
-        <div class="step-title">Cloth & Animation</div>
-        <div class="step-desc">Marvelous Designer for cloth, keyframe and motion work to bring scenes to life.</div>
-      </div>
-      <div class="pipeline-step reveal">
-        <div class="step-num">05</div>
-        <div class="step-icon">▣</div>
-        <div class="step-title">Final Render</div>
-        <div class="step-desc">Composited and polished in Unreal/Blender — delivered cinema-ready.</div>
-      </div>
     </div>
   </div>
 </section>
